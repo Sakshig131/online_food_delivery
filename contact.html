@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact Us</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🍔 Foodie Hub</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="cart.html">Cart</a>
+    </nav>
+</header>
+
+<section class="container-fluid my-5 px-5">
+
+    <h2 class="text-center mb-5">📞 Contact & Order</h2>
+
+    <div class="row align-items-center g-5">
+
+        <!-- LEFT SIDE (BIG FORM) -->
+        <div class="col-md-7">
+
+            <div class="contact-box p-5 shadow">
+
+                <h3 class="mb-4">📝 Fill Your Details</h3>
+
+                <form onsubmit="submitForm(event)">
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control mb-3" placeholder="Your Name" required>
+                        </div>
+
+                        <div class="col-md-6">
+                            <input type="tel" class="form-control mb-3" placeholder="Phone Number" required>
+                        </div>
+                    </div>
+
+                    <input type="email" class="form-control mb-3" placeholder="Email Address" required>
+
+                    <textarea class="form-control mb-3" rows="3" placeholder="Your Address"></textarea>
+
+                    <select class="form-control mb-3">
+                        <option>Select Order Type</option>
+                        <option>Home Delivery</option>
+                        <option>Takeaway</option>
+                    </select>
+
+                    <textarea class="form-control mb-4" rows="3" placeholder="Additional Notes"></textarea>
+
+                    <button class="btn btn-danger w-100 py-2 fs-5">
+                        Submit Order 🚀
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE (BIG MAP) -->
+        <div class="col-md-5">
+
+            <div class="map-box shadow p-3">
+
+                <h4 class="text-center mb-3">📍 Our Location</h4>
+
+                <iframe 
+                    src="https://maps.google.com/maps?q=pune&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    width="100%" height="400"
+                    style="border-radius:12px;">
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+function submitForm(e){
+    e.preventDefault();
+    alert("Order Submitted Successfully 🎉");
+}
+</script>
+
+</body>
+</html>
